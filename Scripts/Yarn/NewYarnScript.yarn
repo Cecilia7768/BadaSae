@@ -1,0 +1,16 @@
+﻿title: Start
+---
+GGom: 안녕?
+-> 반가워.
+    <<set $shapes_like_you += 1>> 
+    <<set $DDazo += 1>> 
+    GGom: 반가워!
+-> 어쩌라고;
+    <<set $shapes_like_you -= 1>> 
+    GGom: 응 저쩌라고~
+        -> 개못됐네?
+            <<set $shapes_like_you -= 1>> 
+            GGom: 응 니가더~               
+        -> 미안;
+             GGom: 알아서 짜져;
+===
