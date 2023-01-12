@@ -9,8 +9,6 @@ public class DiaryDatabaseManager : MonoBehaviour
   [SerializeField] string tsv_FileName;
   Dictionary<int, Diary> diaryDic = new Dictionary<int, Diary>();
 
-  //저장완료 여부는 따로 확인안해도 되지않음?
-
   private void Awake()
   {
     if (instance == null)
