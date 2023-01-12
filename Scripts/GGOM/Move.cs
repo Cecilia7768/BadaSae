@@ -11,8 +11,7 @@ public class Move : MonoBehaviour
   {
     anim = this.GetComponent<Animator>();
     anim.SetBool("LMove", true);
-     StartCoroutine(CheckClick());
-  }
+      }
   IEnumerator CorMove()
   {
     while(true)
@@ -42,26 +41,6 @@ public class Move : MonoBehaviour
     yield return new WaitForSeconds(10f);
     anim.SetBool("LMove", true);
   }  
-  IEnumerator CheckClick()
-  {
-    while (true)
-    {
-      yield return new WaitForSeconds(.001f);
-      if (Input.GetMouseButtonDown(0) && UIManager.Instance.CurrDDazo > 0)
-      {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit = new RaycastHit();
-
-        if (true == (Physics.Raycast(ray.origin, ray.direction, out hit))) 
-        {
-          if (hit.collider.name.Equals("GGom"))
-          {
-            Manager.Instance.OnClickDialog();
-            UIManager.Instance.ResetDDazo(-1);
-          }
-        }
-      }
-    }
-  }
+  
   
 }
