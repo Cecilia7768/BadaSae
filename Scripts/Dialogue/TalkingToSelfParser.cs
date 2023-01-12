@@ -12,7 +12,7 @@ public class TalkingToSelfParser : MonoBehaviour
   public TalkingToSelf[] Parse(string _TSVFileName)
   {
     List<TalkingToSelf> dialougeList = new List<TalkingToSelf>(); //대사 리스트 생성
-    TextAsset csvData = Resources.Load<TextAsset>(_TSVFileName); //CSV파일 가져옴
+    TextAsset csvData = Resources.Load<TextAsset>(_TSVFileName); //TSV파일 가져옴
 
     string[] data = csvData.text.Split(new char[] { '\n' });
 

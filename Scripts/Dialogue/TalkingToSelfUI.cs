@@ -35,8 +35,7 @@ public class TalkingToSelfUI : MonoBehaviour
   IEnumerator TypeWriter()
   {
     lineCount = Random.Range(0, dialogues.Length);
-    string t_ReplaceText = dialogues[lineCount].contexts[contextCount]; // csv일경우 쉼표를 대체하기위해
-                                                                        // t_ReplaceText = t_ReplaceText.Replace("'", ","); //쉼표 치환
+    string t_ReplaceText = dialogues[lineCount].contexts[contextCount]; 
 
     UIManager.Instance.SetTalkingToSelfText(t_ReplaceText);
     yield return new WaitForSeconds(1f);
